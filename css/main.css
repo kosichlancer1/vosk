@@ -1,0 +1,476 @@
+p, span {
+  font-family: "Rubik";
+  font-size: 16px; }
+
+a {
+  font-family: "Rubik";
+  font-size: 16px; }
+
+header {
+  background-image: url("../image/header-bg.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  padding-top: 30px; }
+  header .header-city {
+    padding: 0; }
+  header .jq-selectbox {
+    display: inline-block;
+    width: 100%;
+    max-width: 198px;
+    margin-left: 30px;
+    margin-bottom: 10px; }
+    header .jq-selectbox select {
+      color: #fff;
+      background: transparent;
+      border: 1px solid #fff;
+      -webkit-border-radius: 4px;
+              border-radius: 4px;
+      font-family: 'Roboto slab';
+      padding: 3px 15px;
+      width: 100%; }
+  header .header-phones {
+    padding: 0;
+    text-align: right; }
+    header .header-phones .header-phone {
+      font-family: "Roboto Slab", sans-serif;
+      font-size: 25px;
+      color: #ffffff; }
+  header .header-banner .banner-title {
+    font-size: 40px;
+    color: #ffffff;
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: bold; }
+  header .header-banner .mainButton.xs {
+    margin-right: 30px; }
+  header .header-menu {
+    background-color: #fedebb;
+    -webkit-border-radius: 50px;
+            border-radius: 50px;
+    padding: 10px 6px;
+    padding-left: 25px;
+    margin-bottom: -35px; }
+    header .header-menu nav {
+      display: inline-block;
+      width: -webkit-calc(100% - 170px);
+      width: calc(100% - 170px); }
+    header .header-menu .menu-item {
+      color: #76481a;
+      font-size: 18px;
+      display: inline-block;
+      margin-right: 57px; }
+      header .header-menu .menu-item:hover {
+        color: #07c229;
+        text-decoration: none; }
+
+.videoSection {
+  padding-top: 46px;
+  padding-bottom: 65px; }
+
+.descSection {
+  background-color: #fff6d7;
+  padding-top: 60px;
+  padding-bottom: 80px; }
+  .descSection .descSection-item {
+    margin-bottom: 25px; }
+  .descSection p {
+    font-size: 15px;
+    color: #777777;
+    margin: 0; }
+
+.mottoSection {
+  background-image: url("../image/trees-bg.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover; }
+
+.gallerySection {
+  padding-bottom: 35px; }
+  .gallerySection .bx-wrapper {
+    margin: 0 auto;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+    .gallerySection .bx-wrapper .bx-prev {
+      background-image: url("../image/gal-prev.png");
+      width: 84px;
+      height: 72px;
+      -webkit-background-size: cover;
+              background-size: cover;
+      background-position: center center; }
+      .gallerySection .bx-wrapper .bx-prev:hover {
+        opacity: 0.5;
+        background-position: center center !important; }
+    .gallerySection .bx-wrapper .bx-next {
+      background-image: url("../image/gal-next.png");
+      -webkit-background-size: cover;
+      background-size: cover;
+      width: 84px;
+      background-position: center center;
+      height: 72px; }
+      .gallerySection .bx-wrapper .bx-next:hover {
+        opacity: 0.5;
+        background-position: center center !important; }
+
+.paletteSection {
+  padding: 25px 0; }
+  .paletteSection .bx-wrapper {
+    max-width: 884px !important;
+    margin: 0 auto !important;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin-bottom: 25px !important; }
+    .paletteSection .bx-wrapper .bx-controls-direction {
+      position: absolute !important;
+      width: 100%;
+      bottom: -62px !important; }
+      .paletteSection .bx-wrapper .bx-controls-direction .bx-prev {
+        left: -46px !important;
+        width: 37px;
+        height: 32px;
+        background-image: url("../image/pal-prev.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-background-size: cover;
+        background-size: cover; }
+      .paletteSection .bx-wrapper .bx-controls-direction .bx-next {
+        right: -46px !important;
+        width: 37px;
+        height: 32px;
+        background-image: url("../image/pal-next.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-background-size: cover;
+        background-size: cover; }
+  .paletteSection #slider2-pager {
+    max-width: 884px;
+    text-align: center;
+    margin: 0 auto;
+    letter-spacing: -5px; }
+    .paletteSection #slider2-pager a {
+      width: 72px;
+      height: 72px;
+      display: inline-block;
+      letter-spacing: 0px; }
+      .paletteSection #slider2-pager a:not(:last-child) {
+        margin-right: 29px; }
+      .paletteSection #slider2-pager a img {
+        width: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+        height: 100%; }
+
+.calcSection {
+  padding-top: 50px;
+  padding-bottom: 64px; }
+  .calcSection .calcResult {
+    background-image: url("../image/calc-bg.jpg"); }
+  .calcSection .calcWrap {
+    font-family: "Rubik";
+    font-style: italic;
+    color: #4d311a;
+    font-weight: lighter;
+    font-size: 16px; }
+    .calcSection .calcWrap .mainButton {
+      max-width: 195px;
+      font-style: normal;
+      margin-top: 40px; }
+    .calcSection .calcWrap .calcList {
+      letter-spacing: -5px; }
+      .calcSection .calcWrap .calcList .calcList-left {
+        letter-spacing: 0px;
+        display: inline-block;
+        width: 50%;
+        vertical-align: top; }
+        .calcSection .calcWrap .calcList .calcList-left .leftItem {
+          margin-bottom: 33px; }
+      .calcSection .calcWrap .calcList .calcList-right {
+        letter-spacing: 0px;
+        display: inline-block;
+        width: 50%;
+        vertical-align: top;
+        padding-right: 40px; }
+        .calcSection .calcWrap .calcList .calcList-right .rightItem {
+          text-align: right;
+          position: relative;
+          top: -5px;
+          margin-bottom: 18px; }
+          .calcSection .calcWrap .calcList .calcList-right .rightItem input {
+            max-width: 98px;
+            height: 37px;
+            border: 1px solid #4d311a;
+            -webkit-border-radius: 6px;
+                    border-radius: 6px;
+            margin-left: 30px;
+            margin-right: 10px; }
+    .calcSection .calcWrap [type="radio"]:checked,
+    .calcSection .calcWrap [type="radio"]:not(:checked) {
+      position: absolute;
+      left: -9999px; }
+    .calcSection .calcWrap [type="radio"]:checked + label,
+    .calcSection .calcWrap [type="radio"]:not(:checked) + label {
+      position: relative;
+      padding-left: 37px;
+      cursor: pointer;
+      line-height: 20px;
+      display: inline-block;
+      color: #4d311a; }
+    .calcSection .calcWrap [type="radio"]:checked + label:before,
+    .calcSection .calcWrap [type="radio"]:not(:checked) + label:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 23px;
+      height: 23px;
+      border: 1px solid #4d311a;
+      -webkit-border-radius: 100%;
+              border-radius: 100%;
+      background: #fff; }
+    .calcSection .calcWrap [type="radio"]:checked + label:after,
+    .calcSection .calcWrap [type="radio"]:not(:checked) + label:after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: #6dc13d;
+      position: absolute;
+      top: 7px;
+      left: 7px;
+      -webkit-border-radius: 100%;
+              border-radius: 100%;
+      -webkit-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease; }
+    .calcSection .calcWrap [type="radio"]:not(:checked) + label:after {
+      opacity: 0;
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0); }
+    .calcSection .calcWrap [type="radio"]:checked + label:after {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1); }
+  .calcSection .jq-selectbox {
+    width: 100%;
+    margin-bottom: 40px; }
+    .calcSection .jq-selectbox select {
+      width: 100%;
+      border: 1px solid #4d311a;
+      -webkit-border-radius: 6px;
+              border-radius: 6px;
+      padding: 9px;
+      padding-left: 28px; }
+  .calcSection .sectionTitle {
+    text-align: left; }
+  .calcSection .resultWrap {
+    padding: 10px 50px 19px 40px; }
+    .calcSection .resultWrap .result {
+      letter-spacing: -5px;
+      margin-top: 40px; }
+      .calcSection .resultWrap .result .resultResult {
+        font-family: "Rubik";
+        font-weight: lighter;
+        color: #6f4211;
+        font-style: italic;
+        margin-bottom: 15px;
+        letter-spacing: 0px;
+        display: inline-block;
+        width: 50%; }
+        .calcSection .resultWrap .result .resultResult:last-child {
+          text-align: right; }
+        .calcSection .resultWrap .result .resultResult span {
+          font-size: 21px;
+          font-weight: 500;
+          font-style: normal;
+          display: inline-block;
+          margin: 0px 4px 0px 10px; }
+  .calcSection .resultTitle {
+    font-size: 30px;
+    color: #6f4211;
+    font-family: "Roboto Slab", sans-serif;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 38px; }
+  .calcSection .resultItem {
+    margin-bottom: 9px; }
+  .calcSection .resultItem-title {
+    font-family: "Rubik";
+    font-weight: lighter;
+    color: #6f4211;
+    font-style: italic;
+    display: inline-block;
+    width: 100%;
+    margin-right: 105px;
+    max-width: 200px; }
+    .calcSection .resultItem-title .resultItem-img {
+      margin-right: 9px;
+      display: inline-block;
+      width: 60px;
+      text-align: right; }
+    .calcSection .resultItem-title.l5 img {
+      width: 45px; }
+    .calcSection .resultItem-title.l3 img {
+      width: 39px; }
+    .calcSection .resultItem-title.l1 img {
+      width: 30px; }
+    .calcSection .resultItem-title.l05 img {
+      width: 24px; }
+  .calcSection .resultCount {
+    font-family: "Rubik";
+    font-size: 16px;
+    color: #6f4211; }
+    .calcSection .resultCount span {
+      font-size: 21px;
+      font-weight: 500;
+      display: inline-block;
+      margin-right: 17px; }
+  .calcSection .sendCalc {
+    background-image: url("../image/post-bg.jpg");
+    padding: 20px 0;
+    margin-top: 62px; }
+    .calcSection .sendCalc .sendTitle {
+      font-size: 35px;
+      font-family: "Roboto Slab", sans-serif;
+      color: #6f4211; }
+    .calcSection .sendCalc form {
+      position: relative;
+      margin-top: 30px; }
+    .calcSection .sendCalc .sender {
+      padding-right: 60px; }
+    .calcSection .sendCalc .sendCalcInput {
+      -webkit-box-shadow: inset 6px 8px 17px -5px rgba(208, 208, 208, 0.75);
+              box-shadow: inset 6px 8px 17px -5px rgba(208, 208, 208, 0.75);
+      font-size: 16px;
+      font-style: italic;
+      color: #6f4211;
+      font-family: "Rubik";
+      font-weight: lighter;
+      padding: 24px 36px;
+      width: 100%;
+      border: none;
+      -webkit-border-radius: 40px;
+              border-radius: 40px;
+      /* Firefox 19+ */
+      /* Firefox 18- */ }
+      .calcSection .sendCalc .sendCalcInput:focus {
+        outline: none; }
+      .calcSection .sendCalc .sendCalcInput::-webkit-input-placeholder {
+        color: #6f4211; }
+      .calcSection .sendCalc .sendCalcInput::-moz-placeholder {
+        color: #6f4211; }
+      .calcSection .sendCalc .sendCalcInput:-moz-placeholder {
+        color: #6f4211; }
+      .calcSection .sendCalc .sendCalcInput:-ms-input-placeholder {
+        color: #6f4211; }
+    .calcSection .sendCalc .sendCalcSubmit {
+      width: 70px;
+      height: 70px;
+      -webkit-border-radius: 50%;
+              border-radius: 50%;
+      border: none;
+      background: #07c229;
+      top: 0;
+      position: absolute;
+      right: 0px; }
+    .calcSection .sendCalc .sendCalcTreangle {
+      border-right: 3px solid #fff;
+      border-bottom: 3px solid #fff;
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 25px;
+      z-index: 9;
+      -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+      right: 30px; }
+
+.shopSection .shopSection-item {
+  margin-bottom: 49px; }
+
+.shopSection .shopSection-wrap .shopItem-img {
+  text-align: center; }
+
+.shopSection .shopSection-wrap .shopItem-name {
+  font-family: "Rubik";
+  font-size: 16px;
+  color: #777777;
+  text-align: center;
+  margin-top: 15px; }
+
+.shopSection .shopSection-wrap .shopItem-price {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Roboto Slab", sans-serif;
+  color: #07c229;
+  text-align: center;
+  margin-top: 6px; }
+
+.shopSection .shopSection-wrap .shopItem-buy {
+  display: block;
+  width: 100%;
+  max-width: 128px;
+  background-color: #fedebb;
+  text-align: center;
+  color: #6f4211;
+  font-style: italic;
+  font-weight: lighter;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  padding: 5px 0;
+  margin: 0 auto;
+  margin-top: 14px; }
+
+.tdu {
+  text-decoration: underline; }
+
+.sectionTitle {
+  color: #6f4211;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 60px; }
+
+.subTitle {
+  color: #6f4211;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: left;
+  margin: 0; }
+
+.font-white {
+  color: #ffffff; }
+
+.font-gray {
+  color: #777777; }
+
+.mainButton {
+  display: inline-block;
+  font-family: "Rubik";
+  font-weight: bold;
+  background-color: #fedebb;
+  color: #4d311a;
+  font-size: 16px;
+  padding: 15px;
+  text-align: center;
+  -webkit-border-radius: 25px;
+          border-radius: 25px;
+  width: 100%;
+  text-transform: uppercase; }
+  .mainButton.green {
+    background-color: #07c229;
+    color: #ffffff; }
+  .mainButton:hover {
+    background-color: #6f4211;
+    color: #fff;
+    text-decoration: none; }
+  .mainButton.xs {
+    max-width: 165px; }
+  .mainButton.md {
+    max-width: 275px; }
+  .mainButton.lg {
+    max-width: 375px; }
