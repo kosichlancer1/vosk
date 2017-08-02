@@ -41,8 +41,15 @@ header {
     color: #ffffff;
     font-family: "Roboto Slab", sans-serif;
     font-weight: bold; }
+    @media (max-width: 1199px) {
+      header .header-banner .banner-title {
+        font-size: 25px; }
+        header .header-banner .banner-title br {
+          display: none; } }
   header .header-banner .mainButton.xs {
     margin-right: 30px; }
+  header .header-banner img {
+    max-width: 100%; }
   header .header-menu {
     background-color: #fedebb;
     -webkit-border-radius: 50px;
@@ -62,6 +69,37 @@ header {
       header .header-menu .menu-item:hover {
         color: #07c229;
         text-decoration: none; }
+  @media (max-width: 1199px) {
+    header .banner-desc {
+      padding-top: 60px; }
+    header .banner-buttons {
+      text-align: center; }
+      header .banner-buttons .mainButton.xs {
+        margin-right: 0;
+        margin-bottom: 15px; } }
+  @media (max-width: 991px) {
+    header .header-logo {
+      margin: 0 auto;
+      display: block;
+      margin-bottom: 20px; }
+    header .banner-subTitle {
+      display: none; }
+    header .banner-desc {
+      padding-top: 45px; } }
+  @media (max-width: 768px) {
+    header .header-city {
+      text-align: center; }
+      header .header-city .font-white.tdu {
+        display: block;
+        text-align: center; }
+    header .header-phones {
+      margin-top: 20px;
+      text-align: center; }
+    header .container {
+      padding-left: 5px;
+      padding-right: 5px; }
+    header .jq-selectbox {
+      margin-left: 20px; } }
 
 .videoSection {
   padding-top: 46px;
@@ -164,18 +202,37 @@ header {
 .calcSection {
   padding-top: 50px;
   padding-bottom: 64px; }
+  @media (max-width: 640px) {
+    .calcSection .mobile-width {
+      display: inline-block;
+      min-width: 108px; } }
   .calcSection .calcResult {
-    background-image: url("../image/calc-bg.jpg"); }
+    background-image: url("../image/calc-bg.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+            background-size: cover; }
+    @media (max-width: 768px) {
+      .calcSection .calcResult {
+        width: -webkit-calc(100% + 80px);
+        width: calc(100% + 80px);
+        margin-left: -39px; } }
   .calcSection .calcWrap {
     font-family: "Rubik";
     font-style: italic;
     color: #4d311a;
     font-weight: lighter;
     font-size: 16px; }
+    @media (max-width: 991px) {
+      .calcSection .calcWrap {
+        padding-bottom: 35px; } }
     .calcSection .calcWrap .mainButton {
       max-width: 195px;
       font-style: normal;
       margin-top: 40px; }
+      @media (max-width: 1199px) {
+        .calcSection .calcWrap .mainButton {
+          margin: 0 auto;
+          display: block; } }
     .calcSection .calcWrap .calcList {
       letter-spacing: -5px; }
       .calcSection .calcWrap .calcList .calcList-left {
@@ -185,6 +242,9 @@ header {
         vertical-align: top; }
         .calcSection .calcWrap .calcList .calcList-left .leftItem {
           margin-bottom: 33px; }
+        @media (max-width: 640px) {
+          .calcSection .calcWrap .calcList .calcList-left {
+            width: 100%; } }
       .calcSection .calcWrap .calcList .calcList-right {
         letter-spacing: 0px;
         display: inline-block;
@@ -204,6 +264,14 @@ header {
                     border-radius: 6px;
             margin-left: 30px;
             margin-right: 10px; }
+        @media (max-width: 1199px) {
+          .calcSection .calcWrap .calcList .calcList-right {
+            padding-right: 0; } }
+        @media (max-width: 640px) {
+          .calcSection .calcWrap .calcList .calcList-right {
+            width: 100%; }
+            .calcSection .calcWrap .calcList .calcList-right .rightItem {
+              text-align: left; } }
     .calcSection .calcWrap [type="radio"]:checked,
     .calcSection .calcWrap [type="radio"]:not(:checked) {
       position: absolute;
@@ -264,6 +332,9 @@ header {
       padding-left: 28px; }
   .calcSection .sectionTitle {
     text-align: left; }
+    @media (max-width: 991px) {
+      .calcSection .sectionTitle {
+        text-align: center; } }
   .calcSection .resultWrap {
     padding: 10px 50px 19px 40px; }
     .calcSection .resultWrap .result {
@@ -286,6 +357,15 @@ header {
           font-style: normal;
           display: inline-block;
           margin: 0px 4px 0px 10px; }
+        @media (max-width: 1199px) {
+          .calcSection .resultWrap .result .resultResult {
+            width: 100%;
+            margin-bottom: 5px; }
+            .calcSection .resultWrap .result .resultResult:last-child {
+              text-align: left; } }
+    @media (max-width: 768px) {
+      .calcSection .resultWrap {
+        padding-bottom: 0px; } }
   .calcSection .resultTitle {
     font-size: 30px;
     color: #6f4211;
@@ -293,22 +373,29 @@ header {
     text-align: center;
     margin-top: 0;
     padding-top: 38px; }
+    @media (max-width: 640px) {
+      .calcSection .resultTitle {
+        font-size: 20px; } }
   .calcSection .resultItem {
-    margin-bottom: 9px; }
+    margin-bottom: 9px;
+    letter-spacing: -5px; }
   .calcSection .resultItem-title {
     font-family: "Rubik";
     font-weight: lighter;
     color: #6f4211;
     font-style: italic;
     display: inline-block;
-    width: 100%;
-    margin-right: 105px;
-    max-width: 200px; }
+    max-width: 200px;
+    width: 50%;
+    letter-spacing: 0px; }
     .calcSection .resultItem-title .resultItem-img {
       margin-right: 9px;
       display: inline-block;
       width: 60px;
       text-align: right; }
+      @media (max-width: 500px) {
+        .calcSection .resultItem-title .resultItem-img {
+          display: none; } }
     .calcSection .resultItem-title.l5 img {
       width: 45px; }
     .calcSection .resultItem-title.l3 img {
@@ -320,7 +407,11 @@ header {
   .calcSection .resultCount {
     font-family: "Rubik";
     font-size: 16px;
-    color: #6f4211; }
+    color: #6f4211;
+    display: inline-block;
+    width: 50%;
+    letter-spacing: 0px;
+    text-align: right; }
     .calcSection .resultCount span {
       font-size: 21px;
       font-weight: 500;
@@ -330,15 +421,29 @@ header {
     background-image: url("../image/post-bg.jpg");
     padding: 20px 0;
     margin-top: 62px; }
+    @media (max-width: 1199px) {
+      .calcSection .sendCalc {
+        padding-bottom: 32px; } }
+    @media (max-width: 768px) {
+      .calcSection .sendCalc {
+        margin-top: 0;
+        padding-top: 0px; } }
     .calcSection .sendCalc .sendTitle {
       font-size: 35px;
       font-family: "Roboto Slab", sans-serif;
       color: #6f4211; }
+      @media (max-width: 640px) {
+        .calcSection .sendCalc .sendTitle {
+          font-size: 20px;
+          text-align: center; } }
     .calcSection .sendCalc form {
       position: relative;
       margin-top: 30px; }
     .calcSection .sendCalc .sender {
       padding-right: 60px; }
+      @media (max-width: 1199px) {
+        .calcSection .sendCalc .sender {
+          padding-right: 15px; } }
     .calcSection .sendCalc .sendCalcInput {
       -webkit-box-shadow: inset 6px 8px 17px -5px rgba(208, 208, 208, 0.75);
               box-shadow: inset 6px 8px 17px -5px rgba(208, 208, 208, 0.75);
@@ -354,6 +459,9 @@ header {
               border-radius: 40px;
       /* Firefox 19+ */
       /* Firefox 18- */ }
+      @media (max-width: 640px) {
+        .calcSection .sendCalc .sendCalcInput {
+          font-size: 13px; } }
       .calcSection .sendCalc .sendCalcInput:focus {
         outline: none; }
       .calcSection .sendCalc .sendCalcInput::-webkit-input-placeholder {
@@ -386,12 +494,18 @@ header {
           -ms-transform: rotate(-45deg);
               transform: rotate(-45deg);
       right: 30px; }
+  @media (max-width: 640px) {
+    .calcSection .container {
+      padding-right: 0;
+      padding-left: 0; } }
 
 .shopSection .shopSection-item {
   margin-bottom: 49px; }
 
 .shopSection .shopSection-wrap .shopItem-img {
   text-align: center; }
+  .shopSection .shopSection-wrap .shopItem-img img {
+    max-width: 100%; }
 
 .shopSection .shopSection-wrap .shopItem-name {
   font-family: "Rubik";
@@ -399,6 +513,9 @@ header {
   color: #777777;
   text-align: center;
   margin-top: 15px; }
+  @media (max-width: 640px) {
+    .shopSection .shopSection-wrap .shopItem-name {
+      font-size: 13px; } }
 
 .shopSection .shopSection-wrap .shopItem-price {
   font-size: 25px;
@@ -423,6 +540,98 @@ header {
   margin: 0 auto;
   margin-top: 14px; }
 
+@media (max-width: 640px) {
+  .shopSection .container {
+    padding-right: 0px;
+    padding-left: 0px; }
+  .shopSection .shopSection-item {
+    margin-bottom: 36px; } }
+
+footer {
+  background-color: #6f4211;
+  padding-top: 52px;
+  padding-bottom: 176px; }
+  footer .footer-logo {
+    display: inline-block;
+    margin-right: 30px;
+    vertical-align: top;
+    margin-top: -24px; }
+    footer .footer-logo img {
+      max-width: 100%; }
+  footer .footer-siteMap {
+    letter-spacing: -5px;
+    display: inline-block;
+    width: -webkit-calc(100% - 298px);
+    width: calc(100% - 298px);
+    vertical-align: top; }
+    footer .footer-siteMap .siteMap-item {
+      display: block;
+      color: #ffffff;
+      margin-bottom: 10px;
+      font-size: 18px; }
+    footer .footer-siteMap .siteMap-left {
+      width: 50%;
+      display: inline-block;
+      letter-spacing: 0px; }
+    footer .footer-siteMap .siteMap-right {
+      width: 50%;
+      display: inline-block;
+      letter-spacing: 0px; }
+  footer .footer-phones {
+    display: inline-block;
+    width: -webkit-calc(100% - 170px);
+    width: calc(100% - 170px);
+    vertical-align: top; }
+    footer .footer-phones .footer-phone {
+      letter-spacing: 2px;
+      font-family: "Roboto Slab", sans-serif;
+      font-size: 25px;
+      color: #ffffff; }
+  footer .footer-other {
+    display: inline-block;
+    vertical-align: top; }
+    footer .footer-other .mainButton {
+      width: 165px;
+      margin-bottom: 30px; }
+    footer .footer-other .footer-social {
+      text-align: center; }
+      footer .footer-other .footer-social .social-item {
+        padding: 0 6px; }
+  @media (max-width: 1199px) {
+    footer .footer-logo {
+      margin-top: 0; }
+    footer .footer-siteMap {
+      width: 100%;
+      margin-top: 20px; }
+    footer .footer-phones {
+      width: 100%;
+      margin-bottom: 30px;
+      text-align: center; }
+    footer .footer-other {
+      width: 100%;
+      text-align: center; } }
+  @media (max-width: 991px) {
+    footer {
+      padding-bottom: 45px;
+      padding-top: 19px; }
+      footer .footer-logo {
+        text-align: center;
+        display: block; }
+      footer .footer-siteMap {
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+        margin-bottom: 48px; }
+        footer .footer-siteMap .siteMap-left {
+          display: block;
+          width: 100%; }
+        footer .footer-siteMap .siteMap-right {
+          display: block;
+          width: 100%; }
+      footer .footer-phones {
+        width: 100%;
+        margin-bottom: 30px; } }
+
 .tdu {
   text-decoration: underline; }
 
@@ -433,6 +642,9 @@ header {
   font-size: 35px;
   text-align: center;
   margin-bottom: 60px; }
+  @media (max-width: 991px) {
+    .sectionTitle {
+      font-size: 25px; } }
 
 .subTitle {
   color: #6f4211;

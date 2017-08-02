@@ -57,10 +57,19 @@ header {
       color: #ffffff;
       font-family: $robs;
       font-weight: bold;
+      @media (max-width: 1199px) {
+        font-size: 25px;
+        br {
+          display: none;
+        }
+      }
 
     }
     .mainButton.xs {
       margin-right: 30px;
+    }
+    img {
+      max-width: 100%;
     }
 
   }
@@ -83,6 +92,51 @@ header {
         color: $green;
         text-decoration: none;
       }
+    }
+  }
+  @media (max-width: 1199px) {
+    .banner-desc {
+      padding-top: 60px;
+    }
+    .banner-buttons {
+      text-align: center;
+      .mainButton.xs {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    .header-logo {
+      margin: 0 auto;
+      display: block;
+      margin-bottom: 20px;
+    }
+    .banner-subTitle {
+      display: none;
+    }
+    .banner-desc {
+      padding-top: 45px;
+    }
+  }
+  @media (max-width: 768px) {
+    .header-city {
+      text-align: center;
+      .font-white.tdu {
+        display: block;
+        text-align: center;
+      }
+    }
+    .header-phones {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .container {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    .jq-selectbox {
+      margin-left: 20px;
     }
   }
 }
@@ -207,9 +261,20 @@ header {
 .calcSection {
   padding-top: 50px;
   padding-bottom: 64px;
-
+  .mobile-width {
+    @media(max-width: 640px) {
+      display: inline-block;
+      min-width: 108px;
+    }
+  }
   .calcResult {
     background-image: url('../image/calc-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media (max-width: 768px) {
+      width: calc(100% + 80px);
+      margin-left: -39px;
+    }
   }
   .calcWrap {
     font-family: $rubik;
@@ -217,10 +282,17 @@ header {
     color: #4d311a;
     font-weight:lighter;
     font-size: 16px;
+    @media (max-width: 991px) {
+      padding-bottom: 35px;
+    }
     .mainButton {
       max-width: 195px;
       font-style: normal;
       margin-top: 40px;
+      @media (max-width: 1199px) {
+        margin: 0 auto;
+        display: block;
+      }
     }
 
     .calcList {
@@ -233,6 +305,9 @@ header {
         .leftItem {
           margin-bottom: 33px;
         }
+        @media (max-width: 640px) {
+          width: 100%;
+        }
       }
       .calcList-right {
         letter-spacing: 0px;
@@ -240,6 +315,7 @@ header {
         width: 50%;
         vertical-align: top;
         padding-right: 40px;
+
         .rightItem {
           text-align: right;
           position: relative;
@@ -254,6 +330,15 @@ header {
             margin-left: 30px;
             margin-right: 10px;
 
+          }
+        }
+        @media(max-width: 1199px) {
+          padding-right: 0;
+        }
+        @media (max-width: 640px) {
+          width: 100%;
+          .rightItem {
+            text-align: left;
           }
         }
       }
@@ -322,6 +407,9 @@ header {
   }
   .sectionTitle {
     text-align: left;
+    @media (max-width: 991px) {
+      text-align: center;
+    }
   }
   .resultWrap {
     padding: 10px 50px 19px 40px;
@@ -347,8 +435,18 @@ header {
           display: inline-block;
           margin: 0px 4px 0px 10px;
         }
+        @media(max-width: 1199px) {
+          width: 100%;
+          margin-bottom: 5px;
+          &:last-child {
+            text-align: left;
+          }
+        }
       }
 
+    }
+    @media (max-width: 768px) {
+      padding-bottom: 0px;
     }
   }
   .resultTitle{
@@ -358,9 +456,13 @@ header {
     text-align: center;
     margin-top: 0;
     padding-top: 38px;
+    @media (max-width: 640px) {
+      font-size: 20px;
+    }
   }
   .resultItem {
     margin-bottom: 9px;
+    letter-spacing: -5px;
   }
   .resultItem-title {
     font-family: $rubik;
@@ -368,16 +470,19 @@ header {
     color: $brown;
     font-style: italic;
     display: inline-block;
-    width: 100%;
-
-    margin-right: 105px;
     max-width: 200px;
+    width: 50%;
+    letter-spacing: 0px;
+
 
     .resultItem-img {
       margin-right: 9px;
       display: inline-block;
       width: 60px;
       text-align: right;
+      @media (max-width: 500px) {
+        display: none;
+      }
     }
     &.l5 {
       img {
@@ -407,6 +512,10 @@ header {
     font-family: $rubik;
     font-size: 16px;
     color: $brown;
+    display: inline-block;
+    width: 50%;
+    letter-spacing: 0px;
+    text-align: right;
     span {
       font-size: 21px;
       font-weight:500;
@@ -418,10 +527,21 @@ header {
     background-image: url('../image/post-bg.jpg');
     padding: 20px 0;
     margin-top: 62px;
+    @media (max-width: 1199px) {
+      padding-bottom: 32px;
+    }
+    @media (max-width: 768px) {
+      margin-top: 0;
+      padding-top: 0px;
+    }
     .sendTitle {
       font-size: 35px;
       font-family: $robs;
       color: $brown;
+      @media (max-width: 640px) {
+        font-size: 20px;
+        text-align: center;
+      }
     }
     form {
       position: relative;
@@ -429,6 +549,9 @@ header {
     }
     .sender {
       padding-right: 60px;
+      @media(max-width: 1199px) {
+        padding-right: 15px;
+      }
     }
     .sendCalcInput {
       box-shadow: inset 6px 8px 17px -5px rgba(208, 208, 208, 0.75);
@@ -441,6 +564,9 @@ header {
       width: 100%;
       border: none;
       border-radius: 40px;
+      @media(max-width: 640px) {
+        font-size: 13px;
+      }
       &:focus {
         outline: none;
       }
@@ -473,6 +599,12 @@ header {
 
     }
   }
+  @media (max-width: 640px) {
+    .container {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
 
 }
 
@@ -484,6 +616,9 @@ header {
 
     .shopItem-img {
       text-align: center;
+      img {
+        max-width: 100% ;
+      }
     }
     .shopItem-name {
       font-family: $rubik;
@@ -491,6 +626,9 @@ header {
       color: #777777;
       text-align: center;
       margin-top: 15px;
+      @media (max-width: 640px) {
+        font-size: 13px;
+      }
     }
     .shopItem-price {
       font-size: 25px;
@@ -517,8 +655,126 @@ header {
 
     }
     }
+  @media (max-width: 640px) {
+    .container {
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+    .shopSection-item {
+      margin-bottom: 36px;
+    }
   }
+  }
+footer {
+  background-color: #6f4211;
+  padding-top: 52px;
+  padding-bottom: 176px;
+  .footer-logo {
+    display: inline-block;
+    margin-right: 30px;
+    vertical-align: top;
+    margin-top: -24px;
+    img {
+      max-width: 100%;
+    }
+  }
+  .footer-siteMap {
+    letter-spacing: -5px;
+    display: inline-block;
+    width: calc(100% - 298px);
+    vertical-align: top;
+    .siteMap-item {
+      display: block;
+      color: #ffffff;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
 
+    .siteMap-left{
+      width: 50%;
+      display: inline-block;
+      letter-spacing: 0px;
+    }
+    .siteMap-right{
+      width: 50%;
+      display: inline-block;
+      letter-spacing: 0px;
+    }
+  }
+  .footer-phones{
+    display: inline-block;
+    width: calc(100% - 170px);
+    vertical-align: top;
+    .footer-phone {
+      letter-spacing: 2px;
+      font-family: $robs;
+      font-size: 25px;
+      color: #ffffff;
+    }
+  }
+  .footer-other {
+    display: inline-block;
+    vertical-align: top;
+    .mainButton {
+      width: 165px;
+      margin-bottom: 30px;
+    }
+    .footer-social {
+      text-align: center;
+      .social-item {
+        padding: 0 6px;
+      }
+    }
+  }
+  @media (max-width: 1199px) {
+    .footer-logo {
+      margin-top: 0;
+    }
+    .footer-siteMap {
+      width: 100%;
+      margin-top: 20px;
+    }
+    .footer-phones {
+      width: 100%;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .footer-other {
+      width: 100%;
+      text-align: center;
+    }
+
+  }
+  @media (max-width: 991px) {
+    padding-bottom: 45px;
+    padding-top: 19px;
+    .footer-logo {
+      text-align: center;
+      display: block;
+    }
+    .footer-siteMap {
+      width: 100%;
+      margin-top: 20px;
+      text-align: center;
+      margin-bottom: 48px;
+      .siteMap-left {
+        display: block;
+        width: 100%;
+      }
+      .siteMap-right {
+        display: block;
+        width: 100%;
+      }
+    }
+    .footer-phones {
+      width: 100%;
+
+      margin-bottom: 30px;
+
+    }
+
+  }
+}
 
 
 .tdu {
@@ -532,6 +788,9 @@ header {
   font-size: 35px;
   text-align: center;
   margin-bottom: 60px;
+  @media(max-width: 991px) {
+    font-size: 25px;
+  }
 }
 
 .subTitle {
