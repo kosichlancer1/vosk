@@ -1,4 +1,7 @@
 $(document).ready(function () {
+
+    // инициация слайдеров и переменные для маниауляции параметрами слайдеров
+
     var maxSlides = 5,
         pager = false,
         pagerCustom = '#slider2-pager',
@@ -21,10 +24,6 @@ $(document).ready(function () {
         pager = true;
     }
 
-
-
-
-
     $('.slider1').bxSlider({
         slideWidth: slideW,
         minSlides: maxSlides,
@@ -36,9 +35,6 @@ $(document).ready(function () {
         infiniteLoop: true
 
     });
-
-
-
 
     $('.slider2').bxSlider({
 
@@ -57,11 +53,23 @@ $(document).ready(function () {
 
 
 
+    // открытие меню на мобилках
 
     $('.mobile-menu').click( function () {
         $('.header-menu nav').slideToggle();
-
     });
+
+
+    // закрытие мобильного меню при нажатии на ссылки
+
+    $('.header-menu nav a').click(function () {
+        if(window.innerWidth < 768) {
+            $('.header-menu nav').slideToggle();
+        }
+    });
+
+
+    // восстановление меню при обратном ресайзе на десктоп
 
     window.addEventListener('resize', function () {
         if(window.innerWidth > 768) {
@@ -71,14 +79,13 @@ $(document).ready(function () {
         }
     })
 
+
+    // перебивание стилей у iframe видео
+
     $('.videoSection iframe').css('width', '100%')
 
 
-
-        // $(window).resize(function () {
-        //     var galPrev = (((window.innerWidth - $('.container')[0]).width / 2) + 30) + 'px';
-        //     $('.gallerySection .bx-prev').css('right',  )
-        // })
+    //прилипающее меню на мобилках
 
     document.addEventListener('scroll', function () {
         if(document.body.offsetWidth <= 768) {
@@ -92,6 +99,32 @@ $(document).ready(function () {
         }
 
     })
+
+
+    // плавный переход по якорям
+
+    $(".header-menu").on("click","a", function (event) {
+
+        event.preventDefault();
+
+        var id  = $(this).attr('href'),
+
+        top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+
+    });
+
+    $(".banner-buttons").on("click","a", function (event) {
+
+        event.preventDefault();
+
+        var id  = $(this).attr('href'),
+
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+
+    });
+
 
 
 

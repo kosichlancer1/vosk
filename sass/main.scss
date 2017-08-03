@@ -87,6 +87,9 @@ header {
       display: inline-block;
       width: calc(100% - 170px);
       z-index: 100;
+      a:visited {
+        text-decoration: none;
+      }
     }
     .menu-item {
       color: #76481a;
