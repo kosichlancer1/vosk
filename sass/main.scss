@@ -177,8 +177,19 @@ header {
       width: calc(100% + 10px);
       margin-left: -5px;
       text-align: center;
+      margin-bottom: 0;
+      &.sticky {
+        position: fixed;
+        top: -60px;
+        z-index: 100000;
+        width: 100%;
+
+        transform: translate3d(0px, 60px, 0px);
+        transition: transform .6s cubic-bezier(0.22, 0.61, 0.36, 1);
+      }
       nav {
         position: absolute;
+        z-index: 10000;
         width: 100%;
         top: 100%;
         background: #fedebb;
@@ -216,6 +227,9 @@ header {
     .banner-title {
       text-align: center;
     }
+    .banner-desc {
+      padding-top: 10px;
+    }
     .banner-buttons {
       .mainButton {
         display: block;
@@ -229,6 +243,19 @@ header {
       }
     }
 
+  }
+  @media (max-width: 360px) {
+
+
+    .header-banner {
+      .mb {
+        max-width: 278px;
+        margin: 0;
+      }
+    }
+    .col-md-6 {
+      padding: 0;
+    }
   }
 }
 .videoSection {
@@ -244,8 +271,20 @@ header {
     a {
       display: inline-block;
       width: 29.7%;
+      position: relative;
       &:not(:last-child) {
         margin-right: 5.5%;
+      }
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: calc(50% - 25px);
+        cursor: pointer;
+        left: calc(50% - 25px);
+        width: 51px;
+        height: 51px;
+        background-image: url(../image/play.png);
       }
       img {
         max-width: 100% ;
@@ -336,11 +375,259 @@ header {
 }
 
 .mottoSection {
-  background-image: url('../image/trees-bg.jpg');
+  background-image: url('../image/trees-bg.jpg'),url('../image/motto-bank.png');
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
+  height: 789px;
+  .mottoSection-wrap {
+    letter-spacing: -5px;
+    background-image: url('../image/motto-bank.png');
+    height: 634px;
+    background-repeat: no-repeat;
 
+    background-position: 133px center;
+    .mottoSection-item {
+      .motto-text {
+        display: inline-block;
+        width: calc(100% - 131px);
+        vertical-align: middle;
+        text-align: right;
+        padding-right: 23px;
+
+      }
+      .mottom-image {
+        display: inline-block;
+      }
+      .motto-title {
+        font-family: $robs;
+        font-size: 25px;
+        color: $brown;
+        font-weight: bold;
+        margin: 0;
+      }
+      .motto-desc {
+        font-family: $rubik;
+        font-size: 15px;
+        color: #777777;
+        margin: 0;
+        max-width: 147px;
+        display: inline-block;
+      }
+    }
+  }
+  .mottoSection-left,.mottoSection-right {
+    display: inline-block;
+    vertical-align: top;
+    width: 34.21%;
+    letter-spacing: 0px;
+  }
+  .mottoSection-middle {
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: 0px;
+    width: 31.58%;
+    position: relative;
+    
+  }
+  .mottoSection-left {
+    .mottoSection-item {
+      &:nth-child(2) {
+        margin-top: -21px;
+        margin-right: 96px;
+      }
+      &:nth-child(3) {
+        margin-top: 20px;
+        margin-right: 96px;
+      }
+    }
+  }
+  .mottoSection-right {
+    .mottoSection-item {
+      .motto-text {
+        text-align: left;
+        padding-right: 0;
+        padding-left: 23px;
+      }
+      &:nth-child(2) {
+        margin-top: -21px;
+        margin-left: 96px;
+      }
+      &:nth-child(3) {
+        margin-top: 20px;
+        margin-left: 96px;
+      }
+
+    }
+  }
+  @media (max-width: 1199px) {
+    .mottoSection-wrap {
+      background-position: 33px center;
+    }
+    .mottoSection-left {
+      .mottoSection-item {
+        &:nth-child(2) {
+          margin-top: -21px;
+          margin-right: 96px;
+          .motto-desc {
+            margin-left: -20px;
+          }
+        }
+
+      }
+    }
+
+  }
+  @media (max-width:991px) {
+    .mottoSection-wrap {
+
+      background: none;
+      .mottoSection-item {
+        .motto-text {
+          display: inline-block;
+          width: calc(100% - 131px);
+          vertical-align: middle;
+          text-align: right;
+          padding-right: 23px;
+
+        }
+        .mottom-image {
+          display: inline-block;
+        }
+        .motto-title {
+
+          font-size: 20px;
+
+        }
+        .motto-desc {
+          font-family: $rubik;
+          font-size: 15px;
+          color: #777777;
+          margin: 0;
+          max-width: 147px;
+          display: inline-block;
+        }
+      }
+    }
+    .mottoSection-middle {
+      display: none;
+    }
+    .mottoSection-left,.mottoSection-right {
+
+      width: 50%;
+
+    }
+    .mottoSection-left {
+      padding-right: 20px;
+      .mottoSection-item {
+        margin-bottom: 20px !important;
+        &:nth-child(2) {
+          margin-top:0;
+          margin-right: 0;
+          .motto-desc {
+            margin-left: 0;
+          }
+        }
+        &:nth-child(3) {
+          margin-top:0;
+          margin-right: 0;
+        }
+      }
+    }
+    .mottoSection-right {
+      padding-left: 20px;
+      .mottoSection-item {
+        margin-bottom: 20px !important;
+        .motto-text {
+          text-align: left;
+          padding-right: 0;
+          padding-left: 23px;
+        }
+        &:nth-child(2) {
+          margin-top: 0px;
+          margin-left: 0px;
+        }
+        &:nth-child(3) {
+          margin-top: 0px;
+          margin-left: 0px;
+        }
+
+      }
+    }
+  }
+  @media (max-width:768px) {
+    height:auto;
+    .container {
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+    .mottoSection-wrap {
+      height: auto;
+      background: none;
+      .mottoSection-item {
+        text-align: center;
+        min-height: 242px;
+        .motto-text {
+          text-align: center;
+          width: 100%;
+
+        }
+        .mottom-image {
+          display: inline-block;
+        }
+        .motto-title {
+          word-wrap: break-word;
+          font-size: 20px;
+
+        }
+        .motto-desc {
+          font-family: $rubik;
+          font-size: 15px;
+          color: #777777;
+          margin: 0;
+          max-width:100%;
+          display: inline-block;
+        }
+      }
+    }
+    .mottoSection-middle {
+      display: none;
+    }
+    .mottoSection-left,.mottoSection-right {
+
+      width: 50%;
+
+    }
+    .mottoSection-left {
+      padding-right: 10px;
+      .mottoSection-item {
+        margin-bottom: 20px !important;
+        position: relative;
+        .motto-text {
+          padding-top: 146px;
+          padding-right: 0;
+        }
+        .mottom-image {
+          position: absolute;
+          top: 0;
+          left: calc(50% - 63px);
+        }
+      }
+    }
+    .mottoSection-right {
+      padding-left: 10px;
+      .mottoSection-item {
+        margin-bottom: 20px !important;
+        .motto-text {
+          text-align: center;
+          padding-right: 0;
+          padding-left: 0px;
+        }
+
+
+      }
+    }
+  }
 }
 .gallerySection {
   padding-bottom: 35px;
@@ -522,6 +809,11 @@ header {
           right: 5px;
         }
       }
+    }
+  }
+  @media (min-width: 820px) {
+    .bx-pager.bx-default-pager {
+      display: none;
     }
   }
   @media (max-width: 640px) {
@@ -940,6 +1232,11 @@ header {
       padding: 5px 0;
       margin: 0 auto;
       margin-top: 14px;
+      &:hover {
+        text-decoration: none;
+        background-color: $brown;
+        color: #fff;
+      }
 
     }
     }

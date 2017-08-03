@@ -129,9 +129,23 @@ header {
       width: -webkit-calc(100% + 10px);
       width: calc(100% + 10px);
       margin-left: -5px;
-      text-align: center; }
+      text-align: center;
+      margin-bottom: 0; }
+      header .header-menu.sticky {
+        position: fixed;
+        top: -60px;
+        z-index: 100000;
+        width: 100%;
+        -webkit-transform: translate3d(0px, 60px, 0px);
+                transform: translate3d(0px, 60px, 0px);
+        -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+        transition: -webkit-transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+        -o-transition: transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+        transition: transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+        transition: transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1), -webkit-transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1); }
       header .header-menu nav {
         position: absolute;
+        z-index: 10000;
         width: 100%;
         top: 100%;
         background: #fedebb;
@@ -157,12 +171,20 @@ header {
       margin: 0 auto; }
     header .banner-title {
       text-align: center; }
+    header .banner-desc {
+      padding-top: 10px; }
     header .banner-buttons .mainButton {
       display: block;
       margin: 0px auto 30px auto; }
       header .banner-buttons .mainButton.xs {
         display: block;
         margin: 0px auto 15px auto; } }
+  @media (max-width: 360px) {
+    header .header-banner .mb {
+      max-width: 278px;
+      margin: 0; }
+    header .col-md-6 {
+      padding: 0; } }
 
 .videoSection {
   padding-top: 46px;
@@ -176,9 +198,22 @@ header {
     letter-spacing: -5px; }
     .videoSection #videoSlider-pager a {
       display: inline-block;
-      width: 29.7%; }
+      width: 29.7%;
+      position: relative; }
       .videoSection #videoSlider-pager a:not(:last-child) {
         margin-right: 5.5%; }
+      .videoSection #videoSlider-pager a:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -webkit-calc(50% - 25px);
+        top: calc(50% - 25px);
+        cursor: pointer;
+        left: -webkit-calc(50% - 25px);
+        left: calc(50% - 25px);
+        width: 51px;
+        height: 51px;
+        background-image: url(../image/play.png); }
       .videoSection #videoSlider-pager a img {
         max-width: 100%; }
     @media (max-width: 768px) {
@@ -246,10 +281,177 @@ header {
       display: none; } }
 
 .mottoSection {
-  background-image: url("../image/trees-bg.jpg");
+  background-image: url("../image/trees-bg.jpg"), url("../image/motto-bank.png");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
-  background-size: cover; }
+  background-size: cover;
+  height: 789px; }
+  .mottoSection .mottoSection-wrap {
+    letter-spacing: -5px;
+    background-image: url("../image/motto-bank.png");
+    height: 634px;
+    background-repeat: no-repeat;
+    background-position: 133px center; }
+    .mottoSection .mottoSection-wrap .mottoSection-item .motto-text {
+      display: inline-block;
+      width: -webkit-calc(100% - 131px);
+      width: calc(100% - 131px);
+      vertical-align: middle;
+      text-align: right;
+      padding-right: 23px; }
+    .mottoSection .mottoSection-wrap .mottoSection-item .mottom-image {
+      display: inline-block; }
+    .mottoSection .mottoSection-wrap .mottoSection-item .motto-title {
+      font-family: "Roboto Slab", sans-serif;
+      font-size: 25px;
+      color: #6f4211;
+      font-weight: bold;
+      margin: 0; }
+    .mottoSection .mottoSection-wrap .mottoSection-item .motto-desc {
+      font-family: "Rubik";
+      font-size: 15px;
+      color: #777777;
+      margin: 0;
+      max-width: 147px;
+      display: inline-block; }
+  .mottoSection .mottoSection-left, .mottoSection .mottoSection-right {
+    display: inline-block;
+    vertical-align: top;
+    width: 34.21%;
+    letter-spacing: 0px; }
+  .mottoSection .mottoSection-middle {
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: 0px;
+    width: 31.58%;
+    position: relative; }
+  .mottoSection .mottoSection-left .mottoSection-item:nth-child(2) {
+    margin-top: -21px;
+    margin-right: 96px; }
+  .mottoSection .mottoSection-left .mottoSection-item:nth-child(3) {
+    margin-top: 20px;
+    margin-right: 96px; }
+  .mottoSection .mottoSection-right .mottoSection-item .motto-text {
+    text-align: left;
+    padding-right: 0;
+    padding-left: 23px; }
+  .mottoSection .mottoSection-right .mottoSection-item:nth-child(2) {
+    margin-top: -21px;
+    margin-left: 96px; }
+  .mottoSection .mottoSection-right .mottoSection-item:nth-child(3) {
+    margin-top: 20px;
+    margin-left: 96px; }
+  @media (max-width: 1199px) {
+    .mottoSection .mottoSection-wrap {
+      background-position: 33px center; }
+    .mottoSection .mottoSection-left .mottoSection-item:nth-child(2) {
+      margin-top: -21px;
+      margin-right: 96px; }
+      .mottoSection .mottoSection-left .mottoSection-item:nth-child(2) .motto-desc {
+        margin-left: -20px; } }
+  @media (max-width: 991px) {
+    .mottoSection .mottoSection-wrap {
+      background: none; }
+      .mottoSection .mottoSection-wrap .mottoSection-item .motto-text {
+        display: inline-block;
+        width: -webkit-calc(100% - 131px);
+        width: calc(100% - 131px);
+        vertical-align: middle;
+        text-align: right;
+        padding-right: 23px; }
+      .mottoSection .mottoSection-wrap .mottoSection-item .mottom-image {
+        display: inline-block; }
+      .mottoSection .mottoSection-wrap .mottoSection-item .motto-title {
+        font-size: 20px; }
+      .mottoSection .mottoSection-wrap .mottoSection-item .motto-desc {
+        font-family: "Rubik";
+        font-size: 15px;
+        color: #777777;
+        margin: 0;
+        max-width: 147px;
+        display: inline-block; }
+    .mottoSection .mottoSection-middle {
+      display: none; }
+    .mottoSection .mottoSection-left, .mottoSection .mottoSection-right {
+      width: 50%; }
+    .mottoSection .mottoSection-left {
+      padding-right: 20px; }
+      .mottoSection .mottoSection-left .mottoSection-item {
+        margin-bottom: 20px !important; }
+        .mottoSection .mottoSection-left .mottoSection-item:nth-child(2) {
+          margin-top: 0;
+          margin-right: 0; }
+          .mottoSection .mottoSection-left .mottoSection-item:nth-child(2) .motto-desc {
+            margin-left: 0; }
+        .mottoSection .mottoSection-left .mottoSection-item:nth-child(3) {
+          margin-top: 0;
+          margin-right: 0; }
+    .mottoSection .mottoSection-right {
+      padding-left: 20px; }
+      .mottoSection .mottoSection-right .mottoSection-item {
+        margin-bottom: 20px !important; }
+        .mottoSection .mottoSection-right .mottoSection-item .motto-text {
+          text-align: left;
+          padding-right: 0;
+          padding-left: 23px; }
+        .mottoSection .mottoSection-right .mottoSection-item:nth-child(2) {
+          margin-top: 0px;
+          margin-left: 0px; }
+        .mottoSection .mottoSection-right .mottoSection-item:nth-child(3) {
+          margin-top: 0px;
+          margin-left: 0px; } }
+  @media (max-width: 768px) {
+    .mottoSection {
+      height: auto; }
+      .mottoSection .container {
+        padding-right: 5px;
+        padding-left: 5px; }
+      .mottoSection .mottoSection-wrap {
+        height: auto;
+        background: none; }
+        .mottoSection .mottoSection-wrap .mottoSection-item {
+          text-align: center;
+          min-height: 242px; }
+          .mottoSection .mottoSection-wrap .mottoSection-item .motto-text {
+            text-align: center;
+            width: 100%; }
+          .mottoSection .mottoSection-wrap .mottoSection-item .mottom-image {
+            display: inline-block; }
+          .mottoSection .mottoSection-wrap .mottoSection-item .motto-title {
+            word-wrap: break-word;
+            font-size: 20px; }
+          .mottoSection .mottoSection-wrap .mottoSection-item .motto-desc {
+            font-family: "Rubik";
+            font-size: 15px;
+            color: #777777;
+            margin: 0;
+            max-width: 100%;
+            display: inline-block; }
+      .mottoSection .mottoSection-middle {
+        display: none; }
+      .mottoSection .mottoSection-left, .mottoSection .mottoSection-right {
+        width: 50%; }
+      .mottoSection .mottoSection-left {
+        padding-right: 10px; }
+        .mottoSection .mottoSection-left .mottoSection-item {
+          margin-bottom: 20px !important;
+          position: relative; }
+          .mottoSection .mottoSection-left .mottoSection-item .motto-text {
+            padding-top: 146px;
+            padding-right: 0; }
+          .mottoSection .mottoSection-left .mottoSection-item .mottom-image {
+            position: absolute;
+            top: 0;
+            left: -webkit-calc(50% - 63px);
+            left: calc(50% - 63px); }
+      .mottoSection .mottoSection-right {
+        padding-left: 10px; }
+        .mottoSection .mottoSection-right .mottoSection-item {
+          margin-bottom: 20px !important; }
+          .mottoSection .mottoSection-right .mottoSection-item .motto-text {
+            text-align: center;
+            padding-right: 0;
+            padding-left: 0px; } }
 
 .gallerySection {
   padding-bottom: 35px; }
@@ -392,6 +594,9 @@ header {
         left: 5px; }
       .paletteSection .bx-wrapper .bx-controls-direction .bx-next {
         right: 5px; } }
+  @media (min-width: 820px) {
+    .paletteSection .bx-pager.bx-default-pager {
+      display: none; } }
   @media (max-width: 640px) {
     .paletteSection {
       padding-top: 10px;
@@ -753,6 +958,10 @@ header {
   padding: 5px 0;
   margin: 0 auto;
   margin-top: 14px; }
+  .shopSection .shopSection-wrap .shopItem-buy:hover {
+    text-decoration: none;
+    background-color: #6f4211;
+    color: #fff; }
 
 @media (max-width: 640px) {
   .shopSection .container {

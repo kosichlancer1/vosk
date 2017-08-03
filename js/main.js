@@ -41,7 +41,7 @@ $(document).ready(function () {
 
 
     $('.slider2').bxSlider({
-        pager: pager,
+
         pagerCustom: pagerCustom,
         controls: true,
         infiniteLoop: true
@@ -79,6 +79,19 @@ $(document).ready(function () {
         //     var galPrev = (((window.innerWidth - $('.container')[0]).width / 2) + 30) + 'px';
         //     $('.gallerySection .bx-prev').css('right',  )
         // })
+
+    document.addEventListener('scroll', function () {
+        if(document.body.offsetWidth <= 768) {
+            if($('body').scrollTop() > ($('header').height())- ($('.header-menu').height())) {
+                $('.header-menu').addClass('sticky');
+                $('.videoSection').css('padding-top', $('.header-menu').height() + 46 + 'px')
+            } else {
+                $('.header-menu').removeClass('sticky');
+                $('.videoSection').css('padding-top','46px')
+            }
+        }
+
+    })
 
 
 
