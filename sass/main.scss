@@ -1,4 +1,4 @@
-$brown : #6f4211;
+$brown : #915c12;
 $fBrown : #4d311a;
 $cream : #fedebb;
 $green : #07c229;
@@ -13,7 +13,9 @@ p,span {
 a {
   font-family: $rubik;
   font-size: 16px;
-
+  &:visited {
+    text-decoration: none;
+  }
 }
 
 
@@ -32,7 +34,25 @@ header {
     max-width: 198px;
     margin-left: 30px;
     margin-bottom: 10px;
-    select{
+    text-align: left;
+    &:after {
+      content: '';
+      top: 10px;
+      display: block;
+      position: absolute;
+      border-bottom: 7px solid transparent;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 7px solid #fff;
+      right: 10px;
+    }
+    &.opened {
+      &:after {
+        transform: rotate(180deg);
+        top: 4px;
+      }
+    }
+    .jq-selectbox__select{
       color: #fff;
       background: transparent;
       border: 1px solid #fff;
@@ -41,6 +61,26 @@ header {
       padding: 3px 15px;
       width: 100%;
     }
+
+    .jq-selectbox__dropdown {
+      border-bottom: 6px solid $brown;
+      background: rgba(255,255,255, 0.8);
+      color: $brown;
+      width: 100%;
+      box-shadow: 0px 7px 14px 3px rgba(0, 0, 0, 0.09);
+      ul {
+        padding-left:15px;
+        text-align: left;
+        li {
+          font-size: 16px;
+          cursor: pointer;
+          &:hover {
+            color:#B57614;
+          }
+        }
+      }
+    }
+
   }
   .header-phones {
     padding: 0;
@@ -80,6 +120,20 @@ header {
     padding-left: 25px;
     margin-bottom: -35px;
     position: relative;
+    &.sticky {
+      position: fixed;
+      top: -60px;
+      z-index: 100000;
+      width: 100%;
+      border-radius: 0;
+      left: 0;
+      transform: translate3d(0px, 60px, 0px);
+      transition: transform .6s cubic-bezier(0.22, 0.61, 0.36, 1);
+      .hm-wrap {
+        max-width: 1170px;
+        margin: 0 auto;
+      }
+    }
     .mobile-menu {
       display: none;
     }
@@ -186,7 +240,7 @@ header {
         top: -60px;
         z-index: 100000;
         width: 100%;
-
+        left: auto;
         transform: translate3d(0px, 60px, 0px);
         transition: transform .6s cubic-bezier(0.22, 0.61, 0.36, 1);
       }
@@ -361,6 +415,7 @@ header {
   }
 }
 .descSection {
+  display: none;
   background-color: #fff6d7;
   padding-top: 60px;
   padding-bottom: 80px;
@@ -765,6 +820,23 @@ header {
       height: 72px;
       display: inline-block;
       letter-spacing: 0px;
+      &:hover {
+        text-decoration: none;
+        p {
+          text-decoration: none;
+        }
+      }
+      &:visited {
+        text-decoration: none;
+        p {
+          text-decoration: none;
+        }
+      }
+      &.active {
+        img {
+          box-shadow: 0px 0px 5px 6px rgba(252, 230, 200, 1);
+        }
+      }
       &:not(:last-child) {
         margin-right: 29px;
       }
@@ -773,7 +845,21 @@ header {
         object-fit: cover;
         height: 100%;
       }
+      p {
+        font-size: 16px;
+        color: $brown;
+        text-decoration: none;
+
+      }
     }
+  }
+  .palettItem-title {
+    text-align: center;
+    font-family: $rubik;
+    font-size: 16px;
+    color: #65441c;
+    display: none;
+    margin-top: 0;
   }
   @media (max-width: 991px){
     #slider2-pager {
@@ -802,9 +888,13 @@ header {
       display: none;
 
     }
+    .palettItem-title {
+
+      display: block;
+    }
     .bx-wrapper {
       .bx-controls-direction {
-        bottom:calc(100% + 13px);
+        bottom:90%;
         .bx-prev {
           left:5px;
         }
@@ -907,6 +997,7 @@ header {
             border-radius: 6px;
             margin-left: 30px;
             margin-right: 10px;
+            text-align: center;
 
           }
         }
@@ -972,16 +1063,57 @@ header {
       transform: scale(1);
     }
   }
+
   .jq-selectbox {
     width: 100%;
     margin-bottom: 40px;
-    select {
-      width: 100%;
-      border: 1px solid #4d311a;
-      border-radius: 6px;
-      padding: 9px;
-      padding-left: 28px;
+    color: #4d311a;
+    &:after {
+      content: '';
+      top: 10px;
+      display: block;
+      position: absolute;
+      border-bottom: 7px solid transparent;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 7px solid #4d311a;
+      right: 10px;
     }
+    &.opened {
+      &:after {
+        transform: rotate(180deg);
+        top: 4px;
+      }
+    }
+    .jq-selectbox__select{
+      color: #4d311a;
+      background: transparent;
+      border: 1px solid #4d311a;
+      border-radius: 4px;
+      font-family: 'Roboto slab';
+      padding: 3px 15px;
+      width: 100%;
+    }
+
+    .jq-selectbox__dropdown {
+      border-bottom: 6px solid #4d311a;
+      background: rgba(255,255,255, 0.8);
+      color: #4d311a;
+      width: 100%;
+      box-shadow: 0px 7px 14px 3px rgba(0, 0, 0, 0.09);
+      ul {
+        padding-left:15px;
+        text-align: left;
+        li {
+          font-size: 16px;
+          cursor: pointer;
+          &:hover {
+            color:#B57614;
+          }
+        }
+      }
+    }
+
   }
   .sectionTitle {
     text-align: left;
@@ -1192,8 +1324,70 @@ header {
 }
 
 .shopSection {
+  .jq-selectbox {
+    display: block !important;
+
+    width: 100%;
+
+    max-width: 198px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    color: $brown;
+    font-family: $robs;
+    font-style: italic;
+    &:after {
+      content: '';
+      top: 10px;
+      display: block;
+      position: absolute;
+      border-bottom: 7px solid transparent;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 7px solid $brown;
+      right: 10px;
+    }
+    &.opened {
+      &:after {
+        transform: rotate(180deg);
+        top: 4px;
+      }
+    }
+    .jq-selectbox__select{
+      color: $brown;
+      background: transparent;
+      border: 1px solid $brown;
+      border-radius: 4px;
+      font-family: 'Roboto slab';
+      padding: 3px 15px;
+      width: 100%;
+    }
+
+    .jq-selectbox__dropdown {
+      border-bottom: 6px solid $brown;
+      background: rgba(255,255,255, 0.8);
+      color: $brown;
+      width: 100%;
+      box-shadow: 0px 7px 14px 3px rgba(0, 0, 0, 0.09);
+      ul {
+        padding-left:15px;
+        text-align: left;
+        li {
+          font-size: 16px;
+          cursor: pointer;
+          &:hover {
+            color:#B57614;
+          }
+        }
+      }
+    }
+
+  }
+
   .shopSection-item {
     margin-bottom: 49px;
+
   }
   .shopSection-wrap {
 
@@ -1287,7 +1481,7 @@ header {
 footer {
   background-color: #6f4211;
   padding-top: 52px;
-  padding-bottom: 176px;
+  padding-bottom: 52px;
   .footer-logo {
     display: inline-block;
     margin-right: 30px;

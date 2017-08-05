@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/jquery.bxslider.min.css">
     <link rel="stylesheet" href="css/animate.css">
+    <script src="https://cdn.jsdelivr.net/jquery.formstyler/1.7.8/jquery.formstyler.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
 
 
@@ -26,6 +27,7 @@
     <script>
         new WOW().init();
     </script>
+    <script src="https://cdn.jsdelivr.net/jquery.formstyler/1.7.8/jquery.formstyler.min.js"></script>
 
 
 
@@ -44,14 +46,14 @@
                 <div class="header-right row">
                     <div class="header-city col-md-7 col-sm-6">
                         <span class="font-white">Ваш город</span>
-                        <div class="jq-selectbox jqselect city form-control changed" id="changeemp-styler" style="z-index: 10;"><select onchange="changesotr()" id="changeemp" class="city form-control">
+                        <select id="citypicker" class="city form-control">
                             <option value="1">Ижевск</option>
                             <option value="2">Можга</option>
                             <option value="3">Воткинск</option>
                             <option value="4">Сарапул</option>
                             <option value="6">Ува</option>
                             <option value="5">Глазов</option>
-                        </select><div class="jq-selectbox__select"><div class="jq-selectbox__trigger"><div class="jq-selectbox__trigger-arrow"></div></div></div><div class="jq-selectbox__dropdown" style="height: auto; bottom: auto; top: 32px; display: none;"><ul style="max-height: 435px;"><li class="">Ижевск</li><li>Можга</li><li class="selected sel">Воткинск</li><li>Сарапул</li><li>Ува</li><li>Глазов</li></ul></div></div>
+                        </select>
                         <a href="#" class="font-white tdu">Адреса продаж</a>
                     </div>
                     <div class="header-phones col-md-5 col-sm-6">
@@ -78,6 +80,7 @@
             </div>
         </div>
         <div class="header-menu ">
+            <div class="hm-wrap">
             <nav>
                 <a href="" class="menu-item">Состав</a>
                 <a href="#motto" class="menu-item">Преимущества</a>
@@ -87,7 +90,8 @@
                 <a href="#mapSection" class="menu-item">Где купить</a>
             </nav>
             <span class="mobile-menu">Меню</span>
-            <a href="#shopSection" class="mainButton xs green">Купить</a>
+            <a href="#shopSection" class="mainButton xs green">Корзина</a>
+            </div>
         </div>
     </div>
 </header>
@@ -117,7 +121,7 @@
                 <p class="font-gray">
                     Лоскутный Воск создает надежную защиту для древесины, работающей на открытом воздухе. Идеален для интерьеров спальных помещений, бань, саун и т.д. Используется для обработки любых деревянных поверхностей; срубов, лестниц, полов, элементов каркаса, декоративных изделий и деревянной мебели. Плёнка лоскутного воска надежно защищает поверхности, подверженные опасности разрушения под действием влаги и грибка.
                 </p>
-                <a href="" class="mainButton bottom-sticky lg">подробнее про лоскутный воск</a>
+                <a href="" id="more-inf" class="mainButton bottom-sticky lg">подробнее про лоскутный воск</a>
             </div>
 
         </div>
@@ -301,27 +305,81 @@
     <p class="sectionTitle">Палитра колеров</p>
     <div class="container">
         <ul class="slider2">
-            <li><img src="image/dub.png" /></li>
-            <li><img src="image/dub.png" /></li>
-            <li><img src="image/dub.png" /></li>
-            <li><img src="image/dub.png" /></li>
-            <li><img src="image/dub.png" /></li>
-            <li><img src="image/dub.png" /></li>
-            <li><img src="image/dub.png" /></li>
-            <li><img src="image/dub.png" /></li>
-            <li><img src="image/dub.png" /></li>
+            <li>
+                <p class="palettItem-title">Махагон</p>
+                <img src="image/dub.png" />
+            </li>
+            <li>
+                <p class="palettItem-title">Дуб</p>
+                <img src="image/dub.png" />
+            </li>
+            <li>
+                <p class="palettItem-title">Махагон</p>
+                <img src="image/dub.png" />
+            </li>
+            <li>
+                <p class="palettItem-title">Дуб</p>
+                <img src="image/dub.png" />
+            </li>
+            <li>
+                <p class="palettItem-title">Махагон</p>
+                <img src="image/dub.png" />
+            </li>
+            <li>
+                <p class="palettItem-title">Дуб</p>
+                <img src="image/dub.png" />
+            </li>
+            <li>
+                <p class="palettItem-title">Махагон</p>
+                <img src="image/dub.png" />
+            </li>
+            <li>
+                <p class="palettItem-title">Дуб</p>
+                <img src="image/dub.png" />
+            </li>
+            <li>
+                <p class="palettItem-title">Махагон</p>
+                <img src="image/dub.png" />
+            </li>
         </ul>
 
         <div id="slider2-pager">
-            <a data-slide-index="0" href=""><img src="image/dub.png" /></a>
-            <a data-slide-index="1" href=""><img src="image/dub.png" /></a>
-            <a data-slide-index="3" href=""><img src="image/dub.png" /></a>
-            <a data-slide-index="4" href=""><img src="image/dub.png" /></a>
-            <a data-slide-index="5" href=""><img src="image/dub.png" /></a>
-            <a data-slide-index="6" href=""><img src="image/dub.png" /></a>
-            <a data-slide-index="7" href=""><img src="image/dub.png" /></a>
-            <a data-slide-index="8" href=""><img src="image/dub.png" /></a>
-            <a data-slide-index="9" href=""><img src="image/dub.png" /></a>
+            <a data-slide-index="0" href="">
+                <img src="image/dub.png" />
+                <p>Дуб</p>
+            </a>
+            <a data-slide-index="1" href="">
+                <img src="image/dub.png" />
+                <p>Махагон</p>
+            </a>
+            <a data-slide-index="3" href="">
+                <img src="image/dub.png" />
+                <p>Дуб</p>
+            </a>
+            <a data-slide-index="4" href="">
+                <img src="image/dub.png" />
+                <p>Махагон</p>
+            </a>
+            <a data-slide-index="5" href="">
+                <img src="image/dub.png" />
+                <p>Дуб</p>
+            </a>
+            <a data-slide-index="6" href="">
+                <img src="image/dub.png" />
+                <p>Махагон</p>
+            </a>
+            <a data-slide-index="7" href="">
+                <img src="image/dub.png" />
+                <p>Дуб</p>
+            </a>
+            <a data-slide-index="8" href="">
+                <img src="image/dub.png" />
+                <p>Махагон</p>
+            </a>
+            <a data-slide-index="9" href="">
+                <img src="image/dub.png" />
+                <p>Дуб</p>
+            </a>
         </div>
     </div>
 
@@ -332,14 +390,14 @@
         <div class="col-md-6">
             <p class="sectionTitle">Калькулятор расхода</p>
             <div class="calcWrap">
-                <div class="jq-selectbox jqselect city form-control changed" id="changeemp-styler" style="z-index: 10;"><select onchange="changesotr()" id="changeemp" class="city form-control">
+                <select  id="category" >
                     <option value="1">Категория</option>
                     <option value="2">Категория 1</option>
                     <option value="3">Категория 2</option>
                     <option value="4">Категория 3</option>
                     <option value="6">Категория 4</option>
                     <option value="5">Категория 5</option>
-                </select><div class="jq-selectbox__select"><div class="jq-selectbox__trigger"><div class="jq-selectbox__trigger-arrow"></div></div></div><div class="jq-selectbox__dropdown" style="height: auto; bottom: auto; top: 32px; display: none;"><ul style="max-height: 435px;"><li class="">Категория </li><li>Категория 1</li><li class="selected sel">Категория 2</li><li>Категория 3</li><li>Категория 4</li><li>Категория 5</li></ul></div></div>
+                </select>
                 <div class="calcList">
                     <div class="calcList-left">
                         <div class="leftItem">
@@ -434,6 +492,13 @@
                     <img src="image/shop-img.png" alt="">
                 </div>
                 <div class="shopItem-name">Лоскутный Воск (0,18)</div>
+                <select name="" id="">
+                    <option value="1">10л</option>
+                    <option value="2">5л</option>
+                    <option value="3">3л</option>
+                    <option value="4">1л</option>
+                    <option value="6">0.5л</option>
+                </select>
                 <div class="shopItem-price">345 руб.</div>
                 <a href="" class="shopItem-buy">Купить</a>
             </div>
@@ -442,6 +507,13 @@
                     <img src="image/shop-img.png" alt="">
                 </div>
                 <div class="shopItem-name">Лоскутный Воск (0,18)</div>
+                <select name="" id="">
+                    <option value="1">10л</option>
+                    <option value="2">5л</option>
+                    <option value="3">3л</option>
+                    <option value="4">1л</option>
+                    <option value="6">0.5л</option>
+                </select>
                 <div class="shopItem-price">345 руб.</div>
                 <a href="" class="shopItem-buy">Купить</a>
             </div>
@@ -450,6 +522,13 @@
                     <img src="image/shop-img.png" alt="">
                 </div>
                 <div class="shopItem-name">Лоскутный Воск (0,18)</div>
+                <select name="" id="">
+                    <option value="1">10л</option>
+                    <option value="2">5л</option>
+                    <option value="3">3л</option>
+                    <option value="4">1л</option>
+                    <option value="6">0.5л</option>
+                </select>
                 <div class="shopItem-price">345 руб.</div>
                 <a href="" class="shopItem-buy">Купить</a>
             </div>
@@ -458,6 +537,13 @@
                     <img src="image/shop-img.png" alt="">
                 </div>
                 <div class="shopItem-name">Лоскутный Воск (0,18)</div>
+                <select name="" id="">
+                    <option value="1">10л</option>
+                    <option value="2">5л</option>
+                    <option value="3">3л</option>
+                    <option value="4">1л</option>
+                    <option value="6">0.5л</option>
+                </select>
                 <div class="shopItem-price">345 руб.</div>
                 <a href="" class="shopItem-buy">Купить</a>
             </div>
@@ -466,6 +552,13 @@
                     <img src="image/shop-img.png" alt="">
                 </div>
                 <div class="shopItem-name">Лоскутный Воск (0,18)</div>
+                <select name="" id="">
+                    <option value="1">10л</option>
+                    <option value="2">5л</option>
+                    <option value="3">3л</option>
+                    <option value="4">1л</option>
+                    <option value="6">0.5л</option>
+                </select>
                 <div class="shopItem-price">345 руб.</div>
                 <a href="" class="shopItem-buy">Купить</a>
             </div>
@@ -474,6 +567,13 @@
                     <img src="image/shop-img.png" alt="">
                 </div>
                 <div class="shopItem-name">Лоскутный Воск (0,18)</div>
+                <select name="" id="">
+                    <option value="1">10л</option>
+                    <option value="2">5л</option>
+                    <option value="3">3л</option>
+                    <option value="4">1л</option>
+                    <option value="6">0.5л</option>
+                </select>
                 <div class="shopItem-price">345 руб.</div>
                 <a href="" class="shopItem-buy">Купить</a>
             </div>
@@ -482,6 +582,13 @@
                     <img src="image/shop-img.png" alt="">
                 </div>
                 <div class="shopItem-name">Лоскутный Воск (0,18)</div>
+                <select name="" id="">
+                    <option value="1">10л</option>
+                    <option value="2">5л</option>
+                    <option value="3">3л</option>
+                    <option value="4">1л</option>
+                    <option value="6">0.5л</option>
+                </select>
                 <div class="shopItem-price">345 руб.</div>
                 <a href="" class="shopItem-buy">Купить</a>
             </div>
@@ -490,9 +597,17 @@
                     <img src="image/shop-img.png" alt="">
                 </div>
                 <div class="shopItem-name">Лоскутный Воск (0,18)</div>
+                <select name="" id="">
+                    <option value="1">10л</option>
+                    <option value="2">5л</option>
+                    <option value="3">3л</option>
+                    <option value="4">1л</option>
+                    <option value="6">0.5л</option>
+                </select>
                 <div class="shopItem-price">345 руб.</div>
                 <a href="" class="shopItem-buy">Купить</a>
             </div>
+
 
         </div>
     </div>

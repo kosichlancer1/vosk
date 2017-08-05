@@ -32,12 +32,17 @@ $(document).ready(function () {
         slideMargin: 30,
         pager: pager,
         controls: true,
+        auto: true,
+        pause: 5000,
+        autoHover: true,
         infiniteLoop: true
 
     });
 
     $('.slider2').bxSlider({
-
+        auto: true,
+        pause: 5000,
+        autoHover: true,
         pagerCustom: pagerCustom,
         controls: true,
         infiniteLoop: true
@@ -88,7 +93,7 @@ $(document).ready(function () {
     //прилипающее меню на мобилках
 
     document.addEventListener('scroll', function () {
-        if(document.body.offsetWidth <= 768) {
+
             if($('body').scrollTop() > ($('header').height())- ($('.header-menu').height())) {
                 $('.header-menu').addClass('sticky');
                 $('.videoSection').css('padding-top', $('.header-menu').height() + 46 + 'px')
@@ -96,7 +101,7 @@ $(document).ready(function () {
                 $('.header-menu').removeClass('sticky');
                 $('.videoSection').css('padding-top','46px')
             }
-        }
+
 
     })
 
@@ -109,7 +114,7 @@ $(document).ready(function () {
 
         var id  = $(this).attr('href'),
 
-        top = $(id).offset().top;
+        top = $(id).offset().top - $('.header-menu').height() - 30;
         $('body,html').animate({scrollTop: top}, 1500);
 
     });
@@ -120,12 +125,22 @@ $(document).ready(function () {
 
         var id  = $(this).attr('href'),
 
-            top = $(id).offset().top;
+            top = $(id).offset().top ;
+
         $('body,html').animate({scrollTop: top}, 1500);
+
+
 
     });
 
 
+    // раскрытие блока с подробной инфой о воске
 
+    $('#more-inf').click(function(event){
+        event.preventDefault();
+       $('.descSection').slideToggle();
+    });
+
+    $('select').styler();
 
 });
